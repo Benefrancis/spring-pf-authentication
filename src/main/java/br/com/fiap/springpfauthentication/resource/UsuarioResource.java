@@ -35,9 +35,10 @@ public class UsuarioResource {
     }
 
     @GetMapping(value = "/{id}")
-    public UsuarioResponse findById(@PathVariable Long id) {
-        Usuario usuario = repo.findById(id).orElseThrow();
-        return service.toResponse(usuario);
+    public ResponseEntity<UsuarioResponse> findById(@PathVariable Long id) {
+        Usuario usuario = repo.findById(id).orElse(null);
+        if(Objects.isNull(usuario)) return ResponseEntity.notFound().build();
+        return ResponseEntity.ok(service.toResponse(usuario));
     }
 
     @Transactional
@@ -66,7 +67,7 @@ public class UsuarioResource {
                 .buildAndExpand(salvo.getId())
                 .toUri();
 
-       return ResponseEntity.created(uri).body(body);
+        return ResponseEntity.created(uri).body(body);
 
     }
 
