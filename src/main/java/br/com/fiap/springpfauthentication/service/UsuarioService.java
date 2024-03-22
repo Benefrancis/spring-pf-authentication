@@ -39,7 +39,7 @@ public class UsuarioService implements ServiceDTO<Usuario, UsuarioRequest, Usuar
     @Override
     public Usuario toObjet(UsuarioListagem usuarioListagem) {
         Optional<Usuario> usuario = repo.findById( usuarioListagem.id() );
-        if(usuario.isEmpty()) return null;
+        if (usuario.isEmpty()) return null;
         return usuario.get();
     }
 
