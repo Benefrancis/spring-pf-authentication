@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Objects;
-import java.util.Set;
 
 @RestController
 @RequestMapping(value = "/sistema")
@@ -34,9 +33,8 @@ public class SistemaResource {
     }
 
     @GetMapping(value = "/{id}/responsaveis")
-    public Set<Usuario> getResponsaveis(@PathVariable Long id) {
-        Sistema sistema = repo.findById( id ).orElseThrow();
-        return sistema.getResponsaveis();
+    public Sistema getResponsaveis(@PathVariable Long id) {
+        return repo.findById( id ).orElseThrow();
     }
 
     @Transactional
@@ -59,7 +57,7 @@ public class SistemaResource {
         //Se e o usuário mandar o id de um usuário eu verifico....
         //Será que já tenho um usuário com o id informado no banco de dados?
         //Se tiver ótimo; mas se ele me manda um id de usuário que não existe?
-        // eu considero isso um envio malicioso e retorno um erro
+        // eu considero isso um envio malicioso e retorno um erro.
         if (Objects.nonNull( responsavel.getId() )) {
             responsavel = usuarioRepository.findById( responsavel.getId() ).orElseThrow();
         }

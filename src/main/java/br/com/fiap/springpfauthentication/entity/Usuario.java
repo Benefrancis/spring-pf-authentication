@@ -13,7 +13,18 @@ import lombok.NoArgsConstructor;
 
 
 @Entity
-@Table(name = "TB_USUARIO")
+@Table(name = "TB_USUARIO", uniqueConstraints = {
+
+        @UniqueConstraint(
+                name = "UK_EMAIL_USUARIO",
+                columnNames = "EMAIL"
+        ),
+        @UniqueConstraint(
+                name = "UK_PESSOA_USUARIO",
+                columnNames = "PESSOA"
+        )
+
+})
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_USUARIO")

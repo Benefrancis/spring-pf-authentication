@@ -16,7 +16,12 @@ import java.util.Set;
 
 
 @Entity
-@Table(name = "TB_PERFIL")
+@Table(name = "TB_PERFIL", uniqueConstraints = {
+        @UniqueConstraint(
+                name = "UK_NM_PERFIL",
+                columnNames = "NM_PERFIL"
+        )
+})
 public class Perfil {
 
     @Id
