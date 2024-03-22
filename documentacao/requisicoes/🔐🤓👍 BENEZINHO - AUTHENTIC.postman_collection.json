@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "0f2fb456-7cde-477a-8f67-0df8e99e5175",
+		"name": "🔐🤓👍 BENEZINHO - AUTHENTIC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1524675"
+	},
+	"item": [
+		{
+			"name": "usuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/usuario",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"benefrancis@gmail.com\",\r\n    \"senha\": \"123456\",\r\n    \"pessoa\": {\r\n        \"nome\": \"Benefrancis do Nascimento\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost/usuario",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/sistema",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/sistema",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sistema"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/sistema",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"CAIXA\",\r\n  \"sigla\": \"CX\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost/sistema",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sistema"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/sistema/1/responsaveis",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 2,\r\n    \"nome\" : \"Maria\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost/sistema/1/responsaveis",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"sistema",
+						"1",
+						"responsaveis"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
