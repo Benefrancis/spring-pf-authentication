@@ -167,7 +167,7 @@ Para acessar digite no prompt:
 git clone https://github.com/Benefrancis/spring-pf-authentication.git && cd spring-pf-authentication && git checkout correcao
 ```
 
-A avaliação é em **DUPLA**, em caso de fraude de qualquer tipo todos os envolvidos receberão nota ZERO.
+A atividade é em **DUPLA**, não se esqueça de colocar o nome dos integrantes no arquivo contido em documentacao/equipe.txt. Em caso de fraude de qualquer tipo, todos os envolvidos receberão nota ZERO.
 
 
 
